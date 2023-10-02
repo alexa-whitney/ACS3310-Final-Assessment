@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "string-o-matic": "^1.0.1",
+    "ticktalk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "typescript": "^4.9.5"
+  }
+}
