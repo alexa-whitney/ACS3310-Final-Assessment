@@ -6,6 +6,6 @@ var data = require('./data.json');
 var string_o_matic_1 = require("string-o-matic");
 console.log((0, string_o_matic_1.capitalize)(data[0].first_name) + ' ' + (0, string_o_matic_1.capitalize)(data[0].last_name));
 // Challenge 2: Print the purchased date to a date and format it as: Month Day, Year
-var ticktalk_1 = require("ticktalk");
-var dateObj = new ticktalk_1.D(data[0].purchased);
-console.log(dateObj.format('M d, Y'));
+var D = require('ticktalk');
+var dateObj = new D(data[0].purchased);
+console.log('Purchased: ' + dateObj.format('M d, Y'));
