@@ -7,5 +7,8 @@ var string_o_matic_1 = require("string-o-matic");
 console.log((0, string_o_matic_1.capitalize)(data[0].first_name) + ' ' + (0, string_o_matic_1.capitalize)(data[0].last_name));
 // Challenge 2: Print the purchased date to a date and format it as: Month Day, Year
 var D = require('ticktalk');
-var dateObj = new D(data[0].purchased);
-console.log('Purchased: ' + dateObj.format('M d, Y'));
+var purchasedDate = new D(data[0].purchased);
+console.log('Purchased: ' + purchasedDate.format('M d, Y'));
+// Challenge 3: Print out last payment showing the date as "when". Ex. 'Last Payment: 2 days ago'
+var lastPaymentDate = new D(data[0].lastpayment);
+console.log('Last Payment: ' + lastPaymentDate.when());
