@@ -12,3 +12,21 @@ console.log('Purchased: ' + purchasedDate.format('M d, Y'));
 // Challenge 3: Print out last payment showing the date as "when". Ex. 'Last Payment: 2 days ago'
 var lastPaymentDate = new D(data[0].lastpayment);
 console.log('Last Payment: ' + lastPaymentDate.when());
+// Challenge 4: Format the phone number as: (xxx) xxx-xxxx
+function formatPhoneNumber(input) {
+    // Convert to string in case it's a number
+    var str = String(input);
+    // Check if input has exactly 10 characters/numbers
+    if (str.length !== 10 || !/^\d{10}$/.test(str)) {
+        throw new Error("Invalid phone number input");
+    }
+    // Extract the area code, central office code, and line number
+    var areaCode = str.substring(0, 3);
+    var centralOfficeCode = str.substring(3, 6);
+    var lineNumber = str.substring(6, 10);
+    // Return the formatted phone number
+    return "(".concat(areaCode, ") ").concat(centralOfficeCode, "-").concat(lineNumber);
+}
+// Test the function
+var phoneNumber = data[0].phone;
+console.log('Phone Number:', formatPhoneNumber(phoneNumber));
