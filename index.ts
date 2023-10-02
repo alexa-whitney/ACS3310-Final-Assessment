@@ -16,7 +16,7 @@ const lastPaymentDate = new D(data[0].lastpayment);
 console.log('Last Payment: ' + lastPaymentDate.when());
 
 // Challenge 4: Format the phone number as: (xxx) xxx-xxxx
-function formatPhoneNumber(input: string | number): string {
+export function formatPhoneNumber(input: string | number): string {
     // Convert to string in case it's a number
     const str = String(input);
 

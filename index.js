@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.formatPhoneNumber = void 0;
 // Challenge 0: Import the data.json file into this file
 var data = require('./data.json');
 // Challenge 1: Print the first_name and last_name and convert the first letter of each name to uppercase
@@ -27,6 +28,7 @@ function formatPhoneNumber(input) {
     // Return the formatted phone number
     return "(".concat(areaCode, ") ").concat(centralOfficeCode, "-").concat(lineNumber);
 }
+exports.formatPhoneNumber = formatPhoneNumber;
 // Test the function
 var phoneNumber = data[0].phone;
 console.log('Phone Number:', formatPhoneNumber(phoneNumber));
